@@ -8,6 +8,7 @@ import time
 
 start_time = time.time()
 
+COLORS = ['green', 'blue', 'black', 'purple']
 MAX_X = 500
 MAX_Y = 200
 CENTROIDS = r.randint(3, 4)
@@ -68,10 +69,13 @@ def k_mean_algo(n):
         calculate_new_centroids()
 
 def plot_centroids():
+    c = 0
     for i in range(POINTS):
+        if i % 300 == 0:
+            c += 1
         x = rand_clst_points[i][0]
         y = rand_clst_points[i][1]
-        plt.scatter(x, y, color='green')
+        plt.scatter(x, y, color=COLORS[c])
 
     for i in range(CENTROIDS):
         x1 = centroids_cord[i][0]
