@@ -15,7 +15,7 @@ POINTS = CENTROIDS * 300
 POINTS_AT_CENTROIDS = [[] for _ in range(CENTROIDS)]
 
 centroids_cord = [[
-    r.randint(-MAX_X + MAX_X//5, MAX_X - MAX_Y//5), r.randint(-MAX_Y + MAX_X//5, MAX_Y - MAX_Y//5)
+    r.randint(-MAX_X + MAX_X//5, MAX_X - MAX_X//5), r.randint(-MAX_Y + MAX_Y//5, MAX_Y - MAX_Y//5)
     ] for _ in range(CENTROIDS)]
 new_centroids = centroids_cord
 
@@ -83,7 +83,6 @@ def plot_centroids():
 
 k_mean_algo(500)
 plot_centroids()
-
 
 plt.xlabel('X')
 plt.ylabel('Y')
