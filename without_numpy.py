@@ -1,6 +1,9 @@
 import random as r
 import matplotlib.pyplot as plt
 import math
+import time
+
+start_time = time.time()
 
 MAX_X = 200
 MAX_Y = 200
@@ -69,11 +72,14 @@ assign_points()
 calculate_new_centroids()
 plot_centroids()
 
+
 plt.xlabel('X')
 plt.ylabel('Y')
 plt.title('Centroids and random points.')
 plt.grid(True)
 plt.legend()
+end_time = time.time()
+print(f'Program time: {end_time - start_time}')
 plt.show()
 # print(guess_centroids)
 
