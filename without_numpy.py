@@ -13,7 +13,6 @@ MAX_X = 500
 MAX_Y = 200
 CENTROIDS = r.randint(3, 4)
 POINTS_PER_CENTROID = 300
-TOTAL_POINTS = CENTROIDS * POINTS_PER_CENTROID
 
 centroids_cord = [[
     r.randint(-MAX_X + MAX_X // 5, MAX_X - MAX_X // 5), 
